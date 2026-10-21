@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#f47721" name="theme-color"/>
+<meta name="color-scheme" content="light"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Neferdidi Milkteashop | Freshly Brewed, Made Your Way"/>
+<meta property="og:description" content="Explore Neferdidi's milk tea, fruit tea, coffee, and shakes. Find a branch near you."/>
+<meta property="og:url" content="https://neferdidi-milktea.github.io/Website-1/"/>
+<meta property="og:image" content="https://neferdidi-milktea.github.io/Website-1/neferdidi-mascot.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Neferdidi Milkteashop"/>
+<meta name="twitter:description" content="Explore the menu and find your nearest Neferdidi branch."/>
+<link rel="canonical" href="https://neferdidi-milktea.github.io/Website-1/"/>
+<meta content="Neferdidi Milkteashop — freshly brewed milk tea, fruit tea, coffee and shakes. Find your nearest branch across Egypt." name="description"/>
+<title>Neferdidi | Milkteashop — Freshly Brewed, Made Your Way</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link rel="preload" as="image" href="neferdidi-mascot.webp" fetchpriority="high"/>
+<style>
+:root{
+  --orange:#f47721;--orange-dark:#d95d0d;--orange-soft:#fff1e6;
+  --black:#141414;--ink:#2c2c2c;--muted:#767676;
+  --line:#ece7e2;--cream:#fff8f2;
+  --radius:16px;--shadow:0 18px 40px rgba(20,20,20,.08);
+  --maxw:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;background:#fff;color:var(--black);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Outfit','Inter',sans-serif;line-height:1.15}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 5vw}
+.section{padding:clamp(58px,7vw,100px) 0}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:10px;font-weight:800;font-size:14px;letter-spacing:.2px;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,background .2s,border-color .2s,color .2s}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(244,119,33,.28)}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.btn-dark{background:var(--black);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-2px)}
+.btn-outline{border:1px solid var(--line);color:var(--ink);background:#fff}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange-dark)}
+
+/* ---------- Header ---------- */
+.topbar{height:6px;background:linear-gradient(90deg,var(--orange),#ffa15c,var(--orange))}
+.site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.site-header.scrolled{box-shadow:0 10px 30px rgba(20,20,20,.08)}
+.nav-wrap{max-width:var(--maxw);margin:0 auto;padding:14px 5vw;display:flex;align-items:center;justify-content:space-between;gap:18px;position:relative}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:40px;height:40px;border-radius:13px;background:var(--orange);display:grid;place-items:center;color:#fff;font-family:'Outfit';font-weight:900;font-size:22px;box-shadow:0 6px 16px rgba(244,119,33,.35)}
+.brand-logo{height:38px;width:auto;display:block;flex:none}
+.brand-text{font-family:'Outfit';font-weight:900;letter-spacing:1.6px;font-size:19px;line-height:1}
+.brand-text small{display:block;font-family:'Inter';font-size:8.5px;letter-spacing:3.4px;font-weight:700;margin-top:4px;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:4px}
+.nav-link{padding:9px 14px;border-radius:9px;font-size:14px;font-weight:600;color:#4b4b4b;transition:.2s}
+.nav-link:hover{color:var(--orange-dark);background:var(--orange-soft)}
+.nav-link.active{color:var(--orange-dark);background:var(--orange-soft)}
+.header-cta{padding:12px 18px;font-size:13px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:11px;cursor:pointer;padding:0;place-items:center}
+.burger span{display:block;width:18px;height:2px;background:var(--black);border-radius:2px;margin:3.5px auto;transition:.3s}
+.burger.active span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.burger.active span:nth-child(2){opacity:0}
+.burger.active span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--black);color:#fff;overflow:hidden;padding:clamp(56px,8vw,104px) 0 clamp(60px,8vw,100px)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(680px 460px at 8% -10%,rgba(244,119,33,.30),transparent 68%),
+  radial-gradient(520px 380px at 92% 110%,rgba(244,119,33,.16),transparent 70%)}
+.hero::after{content:"";position:absolute;width:420px;height:420px;border:58px solid rgba(244,119,33,.10);border-radius:50%;right:-120px;top:-170px}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#ff9a55;text-transform:uppercase;font-size:11.5px;font-weight:800;letter-spacing:3px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--orange);border-radius:2px}
+.hero h1{font-size:clamp(40px,6.4vw,76px);line-height:1.02;letter-spacing:-2.4px;font-weight:900;margin:20px 0 20px}
+.hero h1 span{color:var(--orange)}
+.hero p.lead{max-width:540px;color:#cfcfcf;font-size:16.5px;line-height:1.75;margin-bottom:32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:46px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12)}
+.hero-stats b{display:block;font-family:'Outfit';font-size:30px;font-weight:800;letter-spacing:-1px}
+.hero-stats b em{color:var(--orange);font-style:normal}
+.hero-stats span{font-size:11.5px;text-transform:uppercase;letter-spacing:1.8px;color:#9a9a9a;font-weight:700}
+.hero-art{display:grid;place-items:center;position:relative}
+.hero-art::after{content:"";position:absolute;width:270px;height:270px;border-radius:50%;background:radial-gradient(circle,rgba(244,119,33,.42),transparent 66%);filter:blur(14px);z-index:-1}
+.cup{width:auto;height:min(520px,62vh);max-width:100%;object-fit:contain;filter:drop-shadow(0 28px 34px rgba(0,0,0,.55));animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--orange);color:#fff;overflow:hidden;padding:15px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:34px;animation:scroll 26s linear infinite;will-change:transform}
+.marquee-track span{font-family:'Outfit';font-weight:800;font-size:14px;letter-spacing:2.6px;text-transform:uppercase;opacity:.95}
+.marquee-track span.dot{opacity:.55}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Section head ---------- */
+.section-head{max-width:660px;margin-bottom:clamp(30px,4vw,52px)}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head.center .eyebrow{justify-content:center}
+.section-head h2{font-size:clamp(30px,4.4vw,50px);letter-spacing:-1.6px;font-weight:800;margin:16px 0 14px}
+.section-head p{color:var(--muted);font-size:16.5px;line-height:1.7}
+
+/* ---------- Story ---------- */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.story-copy h2{font-size:clamp(30px,4.2vw,48px);letter-spacing:-1.5px;font-weight:800;margin:16px 0 18px}
+.story-copy p{color:#5e5e5e;font-size:16px;line-height:1.8;margin-bottom:16px}
+.story-points{list-style:none;margin-top:26px;display:grid;gap:13px}
+.story-points li{display:flex;gap:12px;align-items:flex-start;font-size:15px;font-weight:600;color:var(--ink)}
+.story-points li::before{content:"✓";flex:none;width:23px;height:23px;border-radius:50%;background:var(--orange-soft);color:var(--orange-dark);display:grid;place-items:center;font-size:12px;font-weight:900;margin-top:2px}
+.story-cards{display:grid;gap:16px}
+.story-card{border-radius:20px;padding:28px;background:var(--cream);border:1px solid #ffe6d4;position:relative;overflow:hidden}
+.story-card:nth-child(2){background:var(--black);border-color:var(--black);color:#fff}
+.story-card:nth-child(3){background:#fff;border-color:var(--line)}
+.story-card b{display:block;font-family:'Outfit';font-size:19px;font-weight:800;margin-bottom:7px}
+.story-card p{font-size:14px;line-height:1.65;color:var(--muted)}
+.story-card:nth-child(2) p{color:#b6b6b6}
+.story-card .big{font-family:'Outfit';font-size:44px;font-weight:900;color:var(--orange);line-height:1;letter-spacing:-2px;margin-bottom:6px}
+
+/* ---------- Menu ---------- */
+.menu-section{background:var(--cream);border-top:1px solid #f6ece3;border-bottom:1px solid #f6ece3}
+.tabs{display:flex;flex-wrap:nowrap;gap:8px;margin:0 -2px 16px;padding:4px 2px 10px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.tab{flex:0 0 auto;white-space:nowrap;padding:9px 15px;border-radius:24px;border:1px solid #ecdfd3;background:#fff;font-family:inherit;font-size:12.5px;font-weight:700;color:#5a5a5a;cursor:pointer;transition:background .18s,border-color .18s,color .18s}
+.tab:hover{border-color:var(--orange);color:var(--orange-dark)}
+.tab.active{background:var(--black);border-color:var(--black);color:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:13px;contain:layout style}
+.dish{position:relative;background:#fff;border:1px solid var(--line);border-radius:15px;padding:12px;display:flex;flex-direction:column;gap:7px;transition:border-color .18s;min-width:0;content-visibility:auto;contain-intrinsic-size:300px}
+.dish:hover{border-color:#ffd0ad}
+.dish.hide{display:none}
+.dish-icon{display:none}
+.dish h3{font-size:15px;font-weight:700;letter-spacing:-.2px;padding-right:0;line-height:1.3}
+.dish p{font-size:12px;color:var(--muted);line-height:1.45;flex:1}
+.price{font-weight:800;color:var(--orange-dark);font-size:13px;margin-top:3px}
+.price small{font-weight:600;color:var(--muted);font-size:11.5px;margin-left:4px}
+.tag{position:absolute;top:19px;right:19px;font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;padding:5px 9px;border-radius:20px;background:var(--orange);color:#fff}
+.tag.new{background:var(--black)}
+.menu-note{margin-top:30px;font-size:13.5px;color:var(--muted);text-align:center;background:#fff;padding:16px;border-radius:12px;border:1px solid var(--line)}
+
+
+.menu-tools{display:flex;align-items:center;gap:10px;margin:0 0 18px}
+.menu-search-wrap{position:relative;flex:1;min-width:0}
+.menu-search{width:100%;height:44px;border:1px solid #ecdfd3;border-radius:12px;background:#fff;padding:0 15px 0 42px;font:500 13px inherit;color:var(--black);outline:none;transition:border-color .18s,box-shadow .18s}
+.menu-search:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(244,119,33,.12)}
+.menu-search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#8a8179;font-size:17px;pointer-events:none}
+.menu-results{font-size:12px;color:var(--muted);white-space:nowrap}
+.dish.hide{display:none!important}
+@media(max-width:600px){.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.dish{padding:9px;border-radius:12px}.dish-photo{height:112px}.dish h3{font-size:13px}.dish p{font-size:11px}.price{font-size:12px}.tag{top:14px;right:14px;font-size:8px;padding:4px 6px}.menu-results{font-size:11px}}
+
+/* ---------- Branches ---------- */
+.section-head.row{max-width:none;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.count{white-space:nowrap;background:var(--cream);border:1px solid #ffe0ca;color:var(--orange-dark);padding:10px 15px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:.6px}
+.toolbar{display:flex;gap:12px;margin-bottom:26px;flex-wrap:wrap}
+.search{flex:1;min-width:230px;position:relative}
+.search input{width:100%;padding:15px 16px 15px 44px;border:1px solid var(--line);border-radius:11px;font:inherit;font-size:15px;outline:none;background:#fff;transition:.2s}
+.search input:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(244,119,33,.12)}
+.search::before{content:"⌕";position:absolute;left:16px;top:6px;font-size:26px;color:#9a9a9a;line-height:1.6}
+.filter{padding:0 18px;border:1px solid var(--line);border-radius:11px;background:#fff;font-family:inherit;font-weight:700;font-size:14px;color:#333;min-height:52px;cursor:pointer;outline:none}
+.filter:focus{border-color:var(--orange)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.branch{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-height:230px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.branch:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#ffd0ad}
+.card-top{height:7px;background:linear-gradient(90deg,var(--orange),#ffa15c)}
+.card-content{padding:23px 22px;display:flex;flex-direction:column;flex:1}
+.branch-number{font-size:10px;letter-spacing:2px;color:var(--orange-dark);font-weight:900;text-transform:uppercase;margin-bottom:11px}
+.branch h3{font-size:20px;line-height:1.25;margin-bottom:9px;font-weight:800;letter-spacing:-.3px}
+.address{font-size:13.2px;color:#6b6b6b;line-height:1.6;margin-bottom:22px;flex:1}
+.actions{display:flex;gap:9px}
+.map-btn{display:flex;justify-content:center;align-items:center;gap:8px;text-decoration:none;padding:12px 13px;border-radius:9px;font-size:12.5px;font-weight:800;flex:1;transition:.22s}
+.map-btn.primary{background:var(--orange);color:#fff}
+.map-btn.primary:hover{background:var(--orange-dark)}
+.empty{display:none;text-align:center;padding:52px 15px;color:var(--muted);grid-column:1/-1;font-size:15px}
+
+/* ---------- Contact ---------- */
+.contact{background:var(--black);color:#fff;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 88% 0%,rgba(244,119,33,.25),transparent 68%)}
+.contact .container{position:relative;z-index:2}
+.contact .section-head p{color:#b4b4b4}
+.contact .eyebrow{color:#ff9a55}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:8px}
+.contact-card{border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:28px 26px;background:rgba(255,255,255,.035);transition:.25s;display:flex;flex-direction:column;gap:10px}
+.contact-card:hover{border-color:var(--orange);background:rgba(244,119,33,.09);transform:translateY(-4px)}
+.contact-card b{font-family:'Outfit';font-size:19px;font-weight:800}
+.contact-card p{font-size:14px;color:#a9a9a9;line-height:1.65;flex:1}
+.contact-card span.link{color:var(--orange);font-weight:800;font-size:13.5px}
+.socials{display:flex;flex-wrap:wrap;gap:11px;margin-top:34px}
+.social{display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:11px;border:1px solid rgba(255,255,255,.16);font-size:13.5px;font-weight:700;transition:.22s}
+.social:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px)}
+
+/* ---------- Footer ---------- */
+footer{background:#0d0d0d;color:#8c8c8c;padding:46px 0 30px;font-size:13.5px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.09)}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.footer-brand .brand-text{color:#fff}
+.footer-brand .brand-text small{color:#7d7d7d}
+.footer-grid p{line-height:1.7;max-width:340px}
+.footer-col h4{font-family:'Outfit';color:#fff;font-size:14px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:14px;font-weight:800}
+.footer-col a{display:block;padding:5px 0;transition:.2s}
+.footer-col a:hover{color:var(--orange)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:22px;flex-wrap:wrap;font-size:12.5px}
+.footer-bottom strong{color:#fff;letter-spacing:1.6px}
+.footer-bottom span{color:var(--orange)}
+
+/* ---------- To top ---------- */
+.to-top{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:14px;background:var(--orange);color:#fff;border:0;display:grid;place-items:center;cursor:pointer;font-size:19px;box-shadow:0 12px 28px rgba(244,119,33,.4);opacity:0;pointer-events:none;transform:translateY(14px);transition:.3s;z-index:150}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.to-top:hover{background:var(--orange-dark)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1080px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:960px){
+  .nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;padding:12px 5vw 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 22px 34px rgba(20,20,20,.10);display:none}
+  .nav.open{display:flex}
+  .nav-link{padding:13px 14px;font-size:15px}
+  .burger{display:grid}
+  .header-cta{display:none}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{display:none}
+  .story-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .brand-text{font-size:17px}
+  .hero h1{letter-spacing:-1.3px}
+  .hero-stats{gap:24px}
+  .hero-stats b{font-size:25px}
+  .grid{grid-template-columns:1fr}
+  .section-head.row{flex-direction:column;align-items:flex-start}
+  .menu-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .to-top{right:14px;bottom:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+
+.dish-photo{width:100%;height:132px;object-fit:contain;background:#fffaf6;border-radius:10px;margin-bottom:3px;}
+.dish-icon{display:none!important;}
+
+/* ================= EVENTS ================= */
+  .nfd-events { --o:var(--orange); --dark:var(--black); background:var(--cream); }
+
+  /* ---- event highlights (logos) ---- */
+  .nfd-slider { position:relative; margin-bottom:24px; }
+  .nfd-track { display:flex; gap:22px; overflow-x:auto; scroll-behavior:smooth; padding:6px 44px 4px; scrollbar-width:none; justify-content:center; }
+  .nfd-track::-webkit-scrollbar { display:none; }
+  .nfd-hl { flex:none; width:92px; text-align:center; }
+  .nfd-ring { width:80px; height:80px; margin:0 auto 8px; border-radius:50%; padding:3px;
+    background:conic-gradient(from 200deg,#f47721,#ffb36b,#e0457b,#f47721); }
+  .nfd-ring span { display:block; width:100%; height:100%; border-radius:50%; border:3px solid #fff8f2; overflow:hidden; background:#fff; }
+  .nfd-ring img { width:100%; height:100%; object-fit:cover; display:block; }
+  .nfd-hl b { display:block; font-size:.78rem; font-weight:600; color:var(--dark); line-height:1.25; }
+  .nfd-arrow { position:absolute; top:34px; transform:translateY(-50%); width:36px; height:36px; border-radius:50%;
+    border:0; background:#fff; color:var(--o); font-size:1.2rem; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,.15); z-index:2; }
+  .nfd-arrow.l { left:0; } .nfd-arrow.r { right:0; }
+
+  /* ---- photo carousel ---- */
+  .nfd-gal { position:relative; }
+  .nfd-gallery { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:smooth;
+    padding:4px 2px 14px; scrollbar-width:none; cursor:grab; -webkit-overflow-scrolling:touch; }
+  .nfd-gallery::-webkit-scrollbar { display:none; }
+  .nfd-gallery.drag { cursor:grabbing; }
+  .nfd-gallery figure { flex:none; height:380px; margin:0; position:relative; border-radius:16px; overflow:hidden;
+    scroll-snap-align:start; cursor:zoom-in; background:#f3e3d4; box-shadow:0 4px 16px rgba(244,119,33,.12); }
+  .nfd-gallery img { height:100%; width:auto; display:block; transition:transform .35s; -webkit-user-drag:none; user-select:none; }
+  .nfd-gallery figure:hover img { transform:scale(1.04); }
+  .nfd-gallery figcaption { position:absolute; left:0; right:0; bottom:0; padding:22px 12px 10px; color:#fff; font-size:.8rem; font-weight:600;
+    background:linear-gradient(transparent, rgba(0,0,0,.65)); opacity:0; transition:.25s; }
+  .nfd-gallery figure:hover figcaption { opacity:1; }
+  .nfd-garrow { position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:44px; height:44px; border-radius:50%;
+    border:0; background:#fff; color:var(--o); font-size:1.5rem; line-height:1; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.22); }
+  .nfd-garrow:hover { background:var(--o); color:#fff; }
+  .nfd-garrow.l { left:8px; } .nfd-garrow.r { right:8px; }
+
+  /* ---- lightbox ---- */
+  .nfd-lightbox { position:fixed; inset:0; background:rgba(15,10,6,.92); display:none; align-items:center; justify-content:center; z-index:9999; padding:20px; }
+  .nfd-lightbox.open { display:flex; }
+  .nfd-lightbox img { max-width:94vw; max-height:82vh; border-radius:12px; }
+  .nfd-lightbox .nfd-cap { position:absolute; bottom:20px; left:0; right:0; text-align:center; color:#fff; font-size:.92rem; }
+  .nfd-lightbox button { position:absolute; background:rgba(255,255,255,.14); color:#fff; border:0; width:44px; height:44px; border-radius:50%; font-size:1.3rem; cursor:pointer; }
+  .nfd-lightbox .nfd-close { top:16px; right:16px; }
+  .nfd-lightbox .nfd-prev { left:12px; top:50%; }
+  .nfd-lightbox .nfd-next { right:12px; top:50%; }
+  @media (max-width:600px){ .nfd-gallery figure{height:290px;} .nfd-garrow{display:none;} .nfd-gallery figcaption{opacity:1;} .nfd-track{padding:6px 8px 4px; justify-content:flex-start;} .nfd-arrow{display:none;} }
+
+
+/* ---------- Menu refresh: compact horizontal drink carousels ---------- */
+.menu-section .tabs{position:relative;gap:8px;margin:0 0 22px;padding:5px 2px 12px;scrollbar-width:none;mask-image:linear-gradient(90deg,#000 0%,#000 94%,transparent 100%)}
+.menu-section .tabs::-webkit-scrollbar{display:none}
+.menu-section .tab{padding:9px 14px;font-size:12px;box-shadow:0 2px 8px rgba(28,22,18,.035)}
+.menu-section .tab.active{background:var(--orange);border-color:var(--orange);color:#fff}
+.menu-tools{margin:0 0 24px;gap:12px}
+.menu-search{height:47px;border-radius:14px;box-shadow:0 3px 14px rgba(28,22,18,.035)}
+.menu-results{font-size:12px;font-weight:700;color:#777;white-space:normal;text-align:right}
+.menu-catalog{display:grid;gap:32px;min-width:0}
+.menu-category{min-width:0;scroll-margin-top:24px}
+.menu-category[hidden]{display:none!important}
+.menu-category-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.menu-category-copy{min-width:0}
+.menu-category-title{font-size:clamp(19px,2.1vw,25px);font-weight:800;letter-spacing:-.6px;line-height:1.2;margin:0 0 5px;color:var(--black)}
+.menu-category-subtitle{font-size:12px;line-height:1.45;color:var(--muted);margin:0}
+.menu-carousel-controls{display:flex;align-items:center;gap:7px;flex:none}
+.menu-category-count{font-size:11px;font-weight:700;color:var(--muted);margin-right:4px;white-space:nowrap}
+.menu-arrow{width:34px;height:34px;display:grid;place-items:center;border:1px solid #eadbce;background:#fff;color:#27221e;border-radius:50%;font-size:17px;line-height:1;cursor:pointer;transition:background .2s,border-color .2s,color .2s;}
+.menu-arrow:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.menu-section .menu-grid.menu-carousel{display:flex!important;grid-template-columns:none!important;grid-auto-columns:unset!important;gap:13px;overflow-x:auto;overflow-y:hidden;padding:3px 2px 13px;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#e6c4aa transparent;contain:layout style;}
+.menu-section .menu-grid.menu-carousel::-webkit-scrollbar{height:5px}
+.menu-section .menu-grid.menu-carousel::-webkit-scrollbar-track{background:transparent}
+.menu-section .menu-grid.menu-carousel::-webkit-scrollbar-thumb{background:#e6c4aa;border-radius:20px}
+.menu-section .menu-grid.menu-carousel .dish{display:flex!important;flex:0 0 clamp(190px,21vw,244px);width:auto;min-width:0;min-height:285px;padding:11px;border-radius:15px;scroll-snap-align:start;scroll-snap-stop:normal;box-shadow:0 4px 14px rgba(32,23,16,.035);transition:transform .2s,border-color .2s,box-shadow .2s;}
+.menu-section .menu-grid.menu-carousel .dish:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(32,23,16,.08)}
+.menu-section .menu-grid.menu-carousel .dish.hide{display:none!important}
+.menu-section .menu-grid.menu-carousel .dish-photo{height:128px;min-height:128px;width:100%;object-fit:contain;background:#fffaf6;border-radius:10px;margin:0 0 3px;}
+.menu-section .menu-grid.menu-carousel .dish h3{font-size:13.5px;line-height:1.35;font-weight:800;margin:0}
+.menu-section .menu-grid.menu-carousel .dish p{font-size:11px;line-height:1.5;color:var(--muted);margin:0;flex:1}
+.menu-section .menu-grid.menu-carousel .price{font-size:12px;line-height:1.4;margin-top:4px}
+.menu-section .menu-grid.menu-carousel .price small{font-size:10px}
+.menu-empty{padding:28px 16px;margin:12px 0 0;background:#fff;border:1px dashed #e8d4c4;border-radius:14px;color:var(--muted);text-align:center;font-size:13px}
+.menu-empty[hidden]{display:none!important}
+@media(max-width:700px){
+ .menu-section .tabs{margin-bottom:16px;gap:7px}
+ .menu-section .tab{padding:9px 12px;font-size:11.5px}
+ .menu-tools{align-items:flex-start;flex-direction:column;gap:8px;margin-bottom:24px}
+ .menu-search-wrap{width:100%}
+ .menu-results{text-align:left;font-size:11px}
+ .menu-catalog{gap:27px}
+ .menu-category-head{align-items:center;margin-bottom:10px}
+ .menu-category-title{font-size:19px}
+ .menu-category-subtitle{font-size:11px}
+ .menu-category-count{display:none}
+ .menu-arrow{width:31px;height:31px}
+ .menu-section .menu-grid.menu-carousel{gap:10px;margin-right:-1vw;padding-bottom:12px;scrollbar-width:none;}
+ .menu-section .menu-grid.menu-carousel::-webkit-scrollbar{display:none}
+ .menu-section .menu-grid.menu-carousel .dish{flex:0 0 min(72vw,250px);min-height:274px;padding:10px;border-radius:14px}
+ .menu-section .menu-grid.menu-carousel .dish-photo{height:122px;min-height:122px}
+ .menu-section .menu-grid.menu-carousel .dish h3{font-size:13px}
+ .menu-section .menu-grid.menu-carousel .dish p{font-size:10.8px}
+}
+@media(prefers-reduced-motion:reduce){.menu-section .menu-grid.menu-carousel{scroll-behavior:auto!important}}
+
+
+.menu-section .menu-grid.menu-carousel .dish-photo-fallback{height:128px;min-height:128px;width:100%;display:grid;place-items:center;background:linear-gradient(145deg,#fff7ef,#fffdfb);border:1px solid #f7e6d7;border-radius:10px;font-size:34px;margin:0 0 3px}
+@media(max-width:700px){.menu-section .menu-grid.menu-carousel .dish-photo-fallback{height:122px;min-height:122px}}
+
+
+/* ---------- Quality, accessibility and mobile polish ---------- */
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+button,a,input,select{-webkit-tap-highlight-color:transparent}
+.btn,.map-btn,.tab,.menu-arrow,.nfd-arrow,.nfd-garrow{touch-action:manipulation}
+.brand-logo{width:auto;height:38px;object-fit:contain}
+.cup{will-change:transform}
+.menu-section .menu-grid.menu-carousel{scrollbar-gutter:stable;}
+.menu-section .menu-grid.menu-carousel .dish{overflow:hidden}
+.menu-section .menu-grid.menu-carousel .dish-photo{aspect-ratio:1.35/1;object-fit:contain}
+.menu-search::placeholder{color:#91877f;opacity:1}
+.menu-tools{position:relative}
+.menu-results{min-height:18px}
+.nfd-gallery figure{background:#241b15;cursor:zoom-in}
+.nfd-gallery img{object-fit:cover}
+.branch:focus-within{border-color:var(--orange)}
+@media(max-width:960px){
+ .nav-wrap{padding-top:11px;padding-bottom:11px}
+ .nav{max-height:calc(100dvh - 76px);overflow-y:auto}
+}
+@media(max-width:600px){
+ .container{padding-left:5vw;padding-right:5vw}
+ .hero{padding-top:52px;padding-bottom:58px}
+ .hero p.lead{font-size:15px}
+ .hero-actions .btn{flex:1 1 145px;padding:13px 14px}
+ .section{padding-top:56px;padding-bottom:56px}
+ .menu-section .menu-grid.menu-carousel .dish{flex-basis:min(68vw,238px)}
+ .nfd-gallery figure{height:270px}
+}
+@media(hover:none){.branch:hover,.menu-section .menu-grid.menu-carousel .dish:hover{transform:none;box-shadow:none}}
+
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+<div class="nav-wrap">
+<a aria-label="Neferdidi home" class="brand" href="#home">
+<img alt="Neferdidi logo" class="brand-logo" src="neferdidi-logo-mark.webp" width="350" height="278" decoding="async"/>
+<span class="brand-text">NEFERDIDI<small>MILKTEASHOP</small></span>
+</a>
+<nav aria-label="Main navigation" class="nav" id="nav">
+<a class="nav-link active" href="#home">Home</a>
+<a class="nav-link" href="#story">Our Story</a>
+<a class="nav-link" href="#menu">Menu</a>
+<a class="nav-link" href="#branches">Branches</a>
+<a class="nav-link" href="#events">Events</a>
+<a class="nav-link" href="#contact">Contact</a>
+</nav>
+<a class="btn btn-primary header-cta" href="#branches">Find a branch</a>
+<button type="button" aria-controls="nav" aria-expanded="false" aria-label="Open menu" class="burger" id="burger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div class="hero-copy">
+<div class="eyebrow">Your next favourite sip</div>
+<h1>Freshly brewed.<br/><span>Made your way.</span></h1>
+<p class="lead">From slow-brewed milk tea and real-fruit teas to Spanish lattes and thick shakes — Neferdidi is your everyday treat, made fresh in every cup, at 12 branches across Egypt.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#menu">Explore the menu →</a>
+<a class="btn btn-ghost" href="#branches">Find your branch</a>
+</div>
+<div class="hero-stats">
+<div><b>12<em>+</em></b><span>Branches</span></div>
+<div><b>3</b><span>Governorates</span></div>
+<div><b>100<em>%</em></b><span>Fresh daily</span></div>
+</div>
+</div>
+<div aria-hidden="true" class="hero-art">
+<img alt="" class="cup" src="neferdidi-mascot.webp" width="399" height="760" decoding="async" fetchpriority="high"/>
+</div>
+</div>
+</section>
+<!-- ================= MARQUEE ================= -->
+<div aria-hidden="true" class="marquee">
+<div class="marquee-track">
+<span>Freshly Brewed</span><span class="dot">•</span><span>Daily Boba</span><span class="dot">•</span><span>Real Fruit</span><span class="dot">•</span><span>Neferdidi Milkteashop</span><span class="dot">•</span>
+<span>Freshly Brewed</span><span class="dot">•</span><span>Daily Boba</span><span class="dot">•</span><span>Real Fruit</span><span class="dot">•</span><span>Neferdidi Milkteashop</span><span class="dot">•</span>
+</div>
+</div>
+<!-- ================= STORY ================= -->
+<section class="section" id="story">
+<div class="container story-grid">
+<div class="story-copy reveal">
+<div class="eyebrow">Our story</div>
+<h2>A little cup of happiness, brewed every day.</h2>
+<p>Neferdidi started with one simple idea: a great milk tea shouldn't be a special occasion. It should be the thing you grab on the way to work, the treat you share with friends, the little pause in a long day.</p>
+<p>So we keep it simple — real tea brewed in small batches, fresh milk, real fruit, and pearls cooked fresh every single day. No shortcuts, no powders pretending to be tea.</p>
+<ul class="story-points">
+<li>Tea brewed fresh in-store, multiple times a day</li>
+<li>Boba pearls cooked on-site, never re-heated</li>
+<li>Real fruit purées — no artificial syrups</li>
+</ul>
+</div>
+<div class="story-cards reveal">
+<div class="story-card">
+<div class="big">12+</div>
+<b>Branches &amp; counting</b>
+<p>Cairo, New Cairo, 10th of Ramadan, Ismailia, Obour and more on the way.</p>
+</div>
+<div class="story-card">
+<b>Made the way you like it</b>
+<p>Every cup is customisable — milk swap and as many toppings as you dare.</p>
+</div>
+<div class="story-card">
+<b>Good drinks. Good moments.</b>
+<p>That's the whole point. Come for the boba, stay for the vibe.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= MENU ================= -->
+<section class="section menu-section" id="menu">
+<div class="container">
+<div class="section-head center reveal">
+<div class="eyebrow">Our menu</div>
+<h2>Something for every craving</h2>
+<p>Browse each collection, then swipe sideways to explore the drinks. Or search for your favourite.</p>
+</div>
+<div aria-label="Menu categories" class="tabs reveal" role="navigation">
+<button type="button" class="tab active" data-cat="all" aria-pressed="true">All Items</button>
+<button type="button" class="tab" data-cat="fruit" aria-pressed="false">Fruit &amp; Slush</button>
+<button type="button" class="tab" data-cat="boba" aria-pressed="false">Boba &amp; Milk Tea</button>
+<button type="button" class="tab" data-cat="pistachio" aria-pressed="false">Pistachio Series</button>
+<button type="button" class="tab" data-cat="coffee" aria-pressed="false">Coffee &amp; Tea</button>
+<button type="button" class="tab" data-cat="topping" aria-pressed="false">Toppings</button>
+</div>
+<div class="menu-tools">
+<div class="menu-search-wrap"><span class="menu-search-icon" aria-hidden="true">⌕</span><input id="menuSearch" class="menu-search" type="search" placeholder="Search drinks, tea, coffee..." aria-label="Search menu items" autocomplete="off"/></div>
+<span class="menu-results" id="menuResults" aria-live="polite">Preparing menu…</span>
+</div>
+<div class="menu-grid reveal" id="menuGrid">
+<!-- FRUIT & SLUSH -->
+<article class="dish" data-cat="fruit">
+<img alt="Mango Coconut Milk" class="dish-photo" src="drink-24.webp" loading="lazy" decoding="async"/><div class="dish-icon">🥥</div>
+<h3>Mango Coconut Milk</h3>
+<p>Mango and coconut milk blended into a tropical, creamy treat.</p>
+<div class="price">170 EGP / 23 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Fresh Green Grape Fruit Slush" class="dish-photo" src="drink-03.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍇</div>
+<h3>Fresh Green Grape Fruit Slush</h3>
+<p>Real green grapes blended with ice for a refreshing slush.</p>
+<div class="price">170 EGP / 23 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Mixed Grapefruit Fruit Slush" class="dish-photo" src="drink-04.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍊</div>
+<h3>Mixed Grapefruit Fruit Slush</h3>
+<p>Citrusy grapefruit blended into a cool, tangy slush.</p>
+<div class="price">170 EGP / 23 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Fresh Peach Fruit Tea" class="dish-photo" src="drink-32.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍑</div>
+<h3>Fresh Peach Fruit Tea</h3>
+<p>Sweet peach slices in a light, refreshing fruit tea.</p>
+<div class="price">150 EGP / 20 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Strawberry &amp; Fresh Orange Fruit Tea" class="dish-photo" src="drink-01.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍓</div>
+<h3>Strawberry &amp; Fresh Orange Fruit Tea</h3>
+<p>A vibrant mix of strawberry and fresh orange in iced tea.</p>
+<div class="price">150 EGP / 20 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Passion Fruit &amp; Mango Tea" class="dish-photo" src="drink-46.webp" loading="lazy" decoding="async"/><div class="dish-icon">🥭</div>
+<h3>Passion Fruit &amp; Mango Tea</h3>
+<p>Tangy passion fruit meets sweet mango over iced tea.</p>
+<div class="price">140 EGP / 20 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Peach Oolong Lemon Tea" class="dish-photo" src="drink-20.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍋</div>
+<h3>Peach Oolong Lemon Tea</h3>
+<p>Fragrant oolong tea with peach and a bright lemon twist.</p>
+<div class="price">140 EGP / 20 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Green Grape Lemon Tea" class="dish-photo" src="drink-31.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍋</div>
+<h3>Green Grape Lemon Tea</h3>
+<p>Green grape and lemon over iced tea for a zesty sip.</p>
+<div class="price">140 EGP / 20 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Lemon Green Tea" class="dish-photo" src="drink-23.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍋</div>
+<h3>Lemon Green Tea</h3>
+<p>Classic iced green tea with fresh lemon.</p>
+<div class="price">120 EGP / 16 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Cream Lemon Smoothie" class="dish-photo" src="drink-40.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍋</div>
+<h3>Cream Lemon Smoothie</h3>
+<p>Lemon blended with cream for a smooth, tangy treat.</p>
+<div class="price">160 EGP / 22 RMB <small>(M)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Cantaloupe Slush" class="dish-photo" src="drink-15.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍈</div>
+<h3>Cantaloupe Slush</h3>
+<p>Sweet cantaloupe blended into a refreshing slush.</p>
+<div class="price">160 EGP / 22 RMB <small>(M)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Cream Strawberry Slush" class="dish-photo" src="drink-25.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍓</div>
+<h3>Cream Strawberry Slush</h3>
+<p>Strawberries and cream blended into a thick slush.</p>
+<div class="price">160 EGP / 22 RMB <small>(M)</small></div>
+</article>
+<article class="dish" data-cat="fruit">
+<img alt="Cream Grape Slush" class="dish-photo" src="drink-41.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍇</div>
+<h3>Cream Grape Slush</h3>
+<p>Grape and cream blended for a smooth, fruity slush.</p>
+<div class="price">160 EGP / 22 RMB <small>(M)</small></div>
+</article>
+<!-- BOBA & MILK TEA -->
+<article class="dish" data-cat="boba">
+<span class="tag">Bestseller</span>
+<img alt="Brown Sugar Boba Milk Tea" class="dish-photo" src="drink-07.webp" loading="lazy" decoding="async"/><div class="dish-icon">🧋</div>
+<h3>Brown Sugar Boba Milk Tea</h3>
+<p>Caramelised brown sugar syrup, creamy milk and warm boba pearls.</p>
+<div class="price">140/120 EGP · 20/16 RMB <small>(L/M)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Pudding Boba Milk Tea" class="dish-photo" src="drink-38.webp" loading="lazy" decoding="async"/><div class="dish-icon">🧋</div>
+<h3>Pudding Boba Milk Tea</h3>
+<p>Classic milk tea with boba pearls and silky pudding.</p>
+<div class="price">160/140 EGP · 22/20 RMB <small>(L/M)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Cream Green Grape Boba" class="dish-photo" src="drink-42.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍇</div>
+<h3>Cream Green Grape Boba</h3>
+<p>Green grape milk tea topped with a creamy foam.</p>
+<div class="price">160 EGP / 22 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Cream Red Grape Boba" class="dish-photo" src="drink-26.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍇</div>
+<h3>Cream Red Grape Boba</h3>
+<p>Red grape milk tea with a rich cream layer.</p>
+<div class="price">160 EGP / 22 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Cream Peach Boba" class="dish-photo" src="drink-43.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍑</div>
+<h3>Cream Peach Boba</h3>
+<p>Peach milk tea finished with a creamy foam.</p>
+<div class="price">160 EGP / 22 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Cream Mango Boba" class="dish-photo" src="drink-48.webp" loading="lazy" decoding="async"/><div class="dish-icon">🥭</div>
+<h3>Cream Mango Boba</h3>
+<p>Mango milk tea topped with a smooth cream foam.</p>
+<div class="price">160 EGP / 22 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Strawberry Milk Shake" class="dish-photo" src="drink-02.webp" loading="lazy" decoding="async"/><div class="dish-icon">🥛</div>
+<h3>Strawberry Milk Shake</h3>
+<p>Thick and creamy strawberry milkshake.</p>
+<div class="price">150 EGP / 20 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Peach Light Milk Tea Boba" class="dish-photo" src="drink-18.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍑</div>
+<h3>Peach Light Milk Tea Boba</h3>
+<p>Light peach milk tea with chewy boba pearls.</p>
+<div class="price">140 EGP / 20 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Jasmine Light Milk Tea Boba" class="dish-photo" src="drink-16.webp" loading="lazy" decoding="async"/><div class="dish-icon">🌸</div>
+<h3>Jasmine Light Milk Tea Boba</h3>
+<p>Fragrant jasmine milk tea with boba pearls.</p>
+<div class="price">140 EGP / 20 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Cream Peach Oolong Tea" class="dish-photo" src="drink-45.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍑</div>
+<h3>Cream Peach Oolong Tea</h3>
+<p>Oolong tea with peach and a cream foam top.</p>
+<div class="price">130 EGP / 17 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Cream Jasmine Tea" class="dish-photo" src="drink-28.webp" loading="lazy" decoding="async"/><div class="dish-icon">🌸</div>
+<h3>Cream Jasmine Tea</h3>
+<p>Jasmine tea topped with a light cream foam.</p>
+<div class="price">130 EGP / 17 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="boba">
+<img alt="Creamy Cocoa" class="dish-photo" src="drink-27.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍫</div>
+<h3>Creamy Cocoa</h3>
+<p>Rich cocoa blended with milk for a smooth, creamy drink.</p>
+<div class="price">160 EGP / 22 RMB <small>(M)</small></div>
+</article>
+<!-- PISTACHIO SERIES -->
+<article class="dish" data-cat="pistachio">
+<span class="tag new">New</span>
+<img alt="Mango Pistachio" class="dish-photo" src="drink-14.webp" loading="lazy" decoding="async"/><div class="dish-icon">🥭</div>
+<h3>Mango Pistachio</h3>
+<p>Mango and pistachio blended into a unique, nutty treat.</p>
+<div class="price">170 EGP / 23 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="pistachio">
+<img alt="Pistachio Spanish Latte" class="dish-photo" src="drink-13.webp" loading="lazy" decoding="async"/><div class="dish-icon">☕</div>
+<h3>Pistachio Spanish Latte</h3>
+<p>Spanish latte with a rich pistachio twist.</p>
+<div class="price">170 EGP / 23 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="pistachio">
+<img alt="Pistachio Cream Peach Oolong Tea" class="dish-photo" src="drink-44.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍑</div>
+<h3>Pistachio Cream Peach Oolong Tea</h3>
+<p>Peach oolong tea with pistachio cream foam.</p>
+<div class="price">130 EGP / 17 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="pistachio">
+<img alt="Pistachio Cream Jasmine Tea" class="dish-photo" src="drink-36.webp" loading="lazy" decoding="async"/><div class="dish-icon">🌸</div>
+<h3>Pistachio Cream Jasmine Tea</h3>
+<p>Jasmine tea topped with pistachio cream foam.</p>
+<div class="price">130 EGP / 17 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="pistachio">
+<img alt="Strawberry Pistachio" class="dish-photo" src="drink-10.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍓</div>
+<h3>Strawberry Pistachio</h3>
+<p>Strawberry and pistachio blended into a creamy delight.</p>
+<div class="price">170/150 EGP · 23/20 RMB <small>(L/M)</small></div>
+</article>
+<article class="dish" data-cat="pistachio">
+<img alt="Cocoa Pistachio" class="dish-photo" src="drink-11.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍫</div>
+<h3>Cocoa Pistachio</h3>
+<p>Cocoa and pistachio combined for a rich, nutty drink.</p>
+<div class="price">160 EGP / 22 RMB <small>(M)</small></div>
+</article>
+<article class="dish" data-cat="pistachio">
+<img alt="Coffee Pistachio" class="dish-photo" src="drink-12.webp" loading="lazy" decoding="async"/><div class="dish-icon">☕</div>
+<h3>Coffee Pistachio</h3>
+<p>Coffee blended with pistachio for a unique flavour.</p>
+<div class="price">120 EGP / 16 RMB <small>(M)</small></div>
+</article>
+<!-- COFFEE & TEA -->
+<article class="dish" data-cat="coffee">
+<span class="tag">Bestseller</span>
+<img alt="Spanish Latte" class="dish-photo" src="drink-34.webp" loading="lazy" decoding="async"/><div class="dish-icon">☕</div>
+<h3>Spanish Latte</h3>
+<p>Espresso, condensed milk and steamed milk — sweet and strong.</p>
+<div class="price">150/120 EGP · 20/16 RMB <small>(L/M)</small></div>
+</article>
+<article class="dish" data-cat="coffee">
+<img alt="Creamy Coffee" class="dish-photo" src="drink-27.webp" loading="lazy" decoding="async"/><div class="dish-icon">☕</div>
+<h3>Creamy Coffee</h3>
+<p>Smooth, creamy coffee for a rich pick-me-up.</p>
+<div class="price">120 EGP / 16 RMB <small>(M)</small></div>
+</article>
+<article class="dish" data-cat="coffee">
+<img alt="Coffee Slush" class="dish-photo" src="drink-17.webp" loading="lazy" decoding="async"/><div class="dish-icon">🧊</div>
+<h3>Coffee Slush</h3>
+<p>Blended iced coffee for a refreshing caffeine kick.</p>
+<div class="price">160 EGP / 22 RMB <small>(M)</small></div>
+</article>
+<article class="dish" data-cat="coffee">
+<img alt="Orange Black Tea" class="dish-photo" src="drink-21.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍊</div>
+<h3>Orange Black Tea</h3>
+<p>Black tea infused with fresh orange.</p>
+<div class="price">130 EGP / 17 RMB <small>(L)</small></div>
+</article>
+<article class="dish" data-cat="coffee">
+<img alt="Lemon Black Tea" class="dish-photo" src="drink-22.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍋</div>
+<h3>Lemon Black Tea</h3>
+<p>Classic black tea with a bright lemon finish.</p>
+<div class="price">120 EGP / 16 RMB <small>(M)</small></div>
+</article>
+<!-- TOPPINGS -->
+<article class="dish" data-cat="topping">
+<img alt="Pistachio Foam" class="dish-photo" src="drink-30.webp" loading="lazy" decoding="async"/><div class="dish-icon">🥜</div>
+<h3>Pistachio Foam</h3>
+<p>Rich and nutty pistachio cream foam.</p>
+<div class="price">20 EGP</div>
+</article>
+<article class="dish" data-cat="topping">
+<img alt="Cream Foam" class="dish-photo" src="drink-29.webp" loading="lazy" decoding="async"/><div class="dish-icon">🥛</div>
+<h3>Cream Foam</h3>
+<p>Classic sweet cream foam topping.</p>
+<div class="price">20 EGP</div>
+</article>
+<article class="dish" data-cat="topping">
+<img alt="Crystal Jelly Boba" class="dish-photo" src="drink-05.webp" loading="lazy" decoding="async"/><div class="dish-icon">✨</div>
+<h3>Crystal Jelly Boba</h3>
+<p>Light, crunchy crystal jelly pearls.</p>
+<div class="price">20 EGP</div>
+</article>
+<article class="dish" data-cat="topping">
+<img alt="Boba" class="dish-photo" src="drink-09.webp" loading="lazy" decoding="async"/><div class="dish-icon">⚫</div>
+<h3>Boba</h3>
+<p>Chewy tapioca pearls.</p>
+<div class="price">20 EGP</div>
+</article>
+<article class="dish" data-cat="topping">
+<img alt="Sago" class="dish-photo" src="drink-19.webp" loading="lazy" decoding="async"/><div class="dish-icon">⚪</div>
+<h3>Sago</h3>
+<p>Small, soft sago pearls.</p>
+<div class="price">20 EGP</div>
+</article>
+<article class="dish" data-cat="topping">
+<img alt="Pudding" class="dish-photo" src="drink-47.webp" loading="lazy" decoding="async"/><div class="dish-icon">🍮</div>
+<h3>Pudding</h3>
+<p>Silky, sweet pudding cubes.</p>
+<div class="price">20 EGP</div>
+</article>
+</div>
+<div class="menu-note reveal">
+<p><strong>Allergy Warning:</strong> Contains Dairy, Fruit, etc. Ask before ordering.</p>
+<p style="margin-top:8px">Images shown are for display purposes only. Prices and availability may vary by branch.</p>
+</div>
+</div>
+</section>
+<!-- ================= BRANCHES ================= -->
+<main class="section" id="branches" style="padding-top:0">
+<div class="container">
+<div class="section-head row reveal">
+<div>
+<div class="eyebrow">Our locations</div>
+<h2>Find your Neferdidi</h2>
+<p>Search by branch or area, then tap to open the location in Google Maps.</p>
+</div>
+<div class="count" id="count">12 LOCATIONS</div>
+</div>
+<div class="toolbar reveal">
+<div class="search">
+<input aria-label="Search branches" id="search" placeholder="Search by branch or area..." type="search"/>
+</div>
+<select aria-label="Filter by area" class="filter" id="area">
+<option value="all">All areas</option>
+<option value="cairo">Cairo</option>
+<option value="newcairo">New Cairo</option>
+<option value="outside">Outside Cairo</option>
+</select>
+</div>
+<div class="grid" id="grid">
+<article class="branch" data-area="cairo" data-name="city stars masaken al mohandessin nasr city">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">01 / Cairo</div>
+<h3>City Stars</h3>
+<p class="address">Masaken Al Mohandesin, Nasr City</p>
+<div class="actions"><a class="map-btn primary" href="https://www.google.com/maps/place/Neferdidi/@30.0734053,31.3473583,17.75z/data=!4m6!3m5!1s0x14583f0055443ac1:0xb023b73282393532!8m2!3d30.0734298!4d31.3473235!16s%2Fg%2F11yvcx_s3_!18m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="cairo" data-name="maadi street of happiness maadi city center entrance">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">02 / Cairo</div>
+<h3>Maadi</h3>
+<p class="address">In front of Street of Happiness, Maadi City Center Entrance</p>
+<div class="actions"><a class="map-btn primary" href="https://www.google.com/maps/place/Neferdidi+Maadi,+infront+of,+Street+Of+Happiness,+Maadi+City+Center+Entrance,+Maadi,+Cairo+Governorate/data=!4m2!3m1!1s0x1458397f0593a4c7:0x3dd2337ac818cd5b!18m1!1e1?utm_source=mstt_1&amp;entry=gps&amp;coh=192189&amp;g_ep=CAESBzI2LjQwLjAYACCenQoq2wEsMTAwODQyOTQyLDk0MjY3NzI3LDk0MjkyMTk1LDk0Mjk5NTMyLDEwMDc5NjQ5OCwxMDA3OTc2NjEsMTAwNzk2NTM1LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDEwMDgwODY1NCw5NDI3NTE2OCw5NDI3OTYxOSwxMDA4MzU3MDQsMTAwODI1MDI1LDEwMDgyMDIzNywxMDA4MjI0OTQsMTAwODI3OTc1LDEwMDgzODM1OSwxMjE4MTY0NjFCAkVH&amp;skid=fac3bc88-920d-4d39-aced-502c2816f140" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="cairo" data-name="egyptian museum tahrir square wasim hasan qasr el nil downtown">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">03 / Cairo</div>
+<h3>The Egyptian Museum</h3>
+<p class="address">Tahrir Square, Wasim Hasan, Qasr El Nil, Downtown Cairo</p>
+<div class="actions"><a class="map-btn primary" href="https://www.google.com/maps/place/26WM%2BQ73+Neferdidi+-The+Egyptian+Museum,+%D9%85%D9%8A%D8%AF%D8%A7%D9%86+%D8%A7%D9%84%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1,+Wasim+Hasan,+Ismailia,+Qasr+El+Nil,+Cairo+Governorate+4272083%E2%80%AD/data=!4m2!3m1!1s0x1458410036441b3b:0xa19d326d16f62e8!18m1!1e1?utm_source=mstt_1&amp;entry=gps&amp;coh=192189&amp;g_ep=CAESBzI2LjQwLjAYACCenQoq2wEsMTAwODQyOTQyLDk0MjY3NzI3LDk0MjkyMTk1LDk0Mjk5NTMyLDEwMDc5NjQ5OCwxMDA3OTc3NjEsMTAwNzk2NTM1LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDEwMDgwODY1NCw5NDI3NTE2OCw5NDI3OTYxOSwxMDA4MzU3MDQsMTAwODI1MDI1LDEwMDgyMDIzNywxMDA4MjI0OTQsMTAwODI3OTc1LDEwMDgzODM1OSwxMjE4MTY0NjFCAkVH&amp;skid=72b572dd-a4a5-4c3c-9152-eae404419db4" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="cairo" data-name="fuel up el moshir tantawy axis al hay al asher nasr city">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">04 / Cairo</div>
+<h3>Neferdidi Fuel Up</h3>
+<p class="address">El-Moshir Tantawy Axis, Al Hay Al Asher, Nasr City</p>
+<div class="actions"><a class="map-btn primary" href="https://www.google.com/maps/place/Neferdidi+(Fuel+Up)/@30.0163764,31.3897003,17z/data=!3m1!4b1!4m6!3m5!1s0x14583dd6fd4535eb:0x49f2ce54b3b1ce66!8m2!3d30.0163764!4d31.3897003!16s%2Fg%2F11zwqvs2vs!18m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="outside" data-name="10th of ramadan misr el nour road">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">05 / 10th of Ramadan</div>
+<h3>10th of Ramadan</h3>
+<p class="address">Misr El Nour Road, 10th of Ramadan Second</p>
+<div class="actions"><a class="map-btn primary" href="https://www.google.com/maps/place/Neferdidi/@30.3190615,31.7377685,17z/data=!3m1!4b1!4m6!3m5!1s0x14f80716072b166d:0xbf64b5e7502cfb0d!8m2!3d30.3190615!4d31.7377685!16s%2Fg%2F11nvjtg7tb!18m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="outside" data-name="ismailia 3 the ring road el sheikh zayed">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">06 / Ismailia</div>
+<h3>Ismailia 3</h3>
+<p class="address">The Ring Road, El Sheikh Zayed, Ismailia 3</p>
+<div class="actions"><a class="map-btn primary" href="https://www.google.com/maps/place/Neferdidi/@30.6203611,32.2853221,17z/data=!3m1!4b1!4m6!3m5!1s0x14f859ed9e10db63:0x7fa3b16c67bdc0c0!8m2!3d30.6203611!4d32.2853221!16s%2Fg%2F11zfkp3dq0!18m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="newcairo" data-name="park mall new cairo cairo festival new cairo 1">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">07 / New Cairo</div>
+<h3>Park Mall</h3>
+<p class="address">Park Mall, New Cairo 1</p>
+<div class="actions"><a class="map-btn primary" href="https://www.google.com/maps/place/Cairo+Governorate,+New+Cairo+1,+Neferdidi+park+mall/data=!4m2!3m1!1s0x145823f5e1801a31:0x630cff2b20c6e3" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="cairo" data-name="nasr city helmy abd el aaty eighth district">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">08 / Cairo</div>
+<h3>Nasr City – 8th District</h3>
+<p class="address">Helmy Abd El-Aaty Street, Al Manteqah Ath Thamenah, Nasr City</p>
+<div class="actions"><a class="map-btn primary" href="https://maps.app.goo.gl/2yRkEEXpxKFH7shC7" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="cairo" data-name="citadel salah el din castle">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">09 / Cairo</div>
+<h3>Citadel</h3>
+<p class="address">Saladin Citadel area, Cairo</p>
+<div class="actions"><a class="map-btn primary" href="https://maps.app.goo.gl/CM1u1bDSRvHQ3LaF7" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="cairo" data-name="sheraton ankara sheraton al matar el nozha">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">10 / Cairo</div>
+<h3>Sheraton</h3>
+<p class="address">Ankara Street, Sheraton Al Matar, El Nozha</p>
+<div class="actions"><a class="map-btn primary" href="https://maps.app.goo.gl/egJypythCJpe4Asz8" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="cairo" data-name="child's park childs park aku plaza nasr city">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">11 / Cairo</div>
+<h3>Child’s Park</h3>
+<p class="address">Aku Plaza, Abou Dawoud Al Zaheri Street, 6th District, Nasr City</p>
+<div class="actions"><a class="map-btn primary" href="https://maps.app.goo.gl/RYmEf6sU4jKnjgbA7" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<article class="branch" data-area="outside" data-name="obour golf city mall al obour al qalubia qalubia">
+<div class="card-top"></div>
+<div class="card-content">
+<div class="branch-number">12 / Obour</div>
+<h3>Obour – Golf City Mall</h3>
+<p class="address">Golf City Mall, Obour, Al-Qalyubia</p>
+<div class="actions"><a class="map-btn primary" href="https://www.google.com/maps/place/neferdidi+el+obour/@30.174349,31.3933971,12z/data=!4m6!3m5!1s0x14581b6edef15b4b:0x58431d251db9f072!8m2!3d30.1740509!4d31.4751113!16s%2Fg%2F11zz9xn38v?entry=ttu&amp;g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" rel="noopener" target="_blank">↗ Open in Maps</a></div>
+</div>
+</article>
+<div class="empty" id="empty">No branches match your search. Try another name or area.</div>
+</div>
+</div>
+</main>
+<!-- ================= EVENTS ================= -->
+<section class="section nfd-events" id="events">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Out &amp; about</div>
+      <h2>Our events</h2>
+    </div>
+    <!-- ===== HIGHLIGHTS: logos of the events we joined ===== -->
+    <div class="nfd-slider">
+      <button class="nfd-arrow l" aria-label="Previous">‹</button>
+      <div class="nfd-track">
+        <div class="nfd-hl"><div class="nfd-ring"><span><img src="logo-anyma.webp" alt="Anyma"></span></div><b>Anyma</b></div>
+        <div class="nfd-hl"><div class="nfd-ring"><span><img src="logo-tiesto.webp" alt="Tiësto"></span></div><b>Tiësto</b></div>
+        <div class="nfd-hl"><div class="nfd-ring"><span><img src="logo-wegz.webp" alt="WEGZ × PUBG"></span></div><b>WEGZ × PUBG</b></div>
+        <div class="nfd-hl"><div class="nfd-ring"><span><img src="logo-hekma.webp" alt="Beit El Hekma"></span></div><b>Beit El Hekma</b></div>
+        <div class="nfd-hl"><div class="nfd-ring"><span><img src="logo-miu.webp" alt="MIU Theatre"></span></div><b>MIU Theatre</b></div>
+        <div class="nfd-hl"><div class="nfd-ring"><span><img src="logo-huawei.webp" alt="Huawei"></span></div><b>Huawei</b></div>
+        <div class="nfd-hl"><div class="nfd-ring"><span><img src="logo-garden.webp" alt="Women's Day"></span></div><b>Women's Day</b></div>
+      </div>
+      <button class="nfd-arrow r" aria-label="Next">›</button>
+    </div>
+    <!-- ===== PHOTO CAROUSEL (swipe / drag / arrows) ===== -->
+    <div class="nfd-gal">
+      <button class="nfd-garrow l" aria-label="Previous photos">‹</button>
+      <div class="nfd-gallery">
+      <figure data-full="pyramids-01.webp"><img src="pyramids-01.webp" width="800" height="800" decoding="async" alt="Pyramids of Giza" loading="lazy"><figcaption>Pyramids of Giza</figcaption></figure>
+      <figure data-full="wegz-01.webp"><img src="wegz-01.webp" width="600" height="800" decoding="async" alt="WEGZ × PUBG Mobile × Neferdidi" loading="lazy"><figcaption>WEGZ × PUBG Mobile × Neferdidi</figcaption></figure>
+      <figure data-full="spring-01.webp"><img src="spring-01.webp" width="800" height="800" decoding="async" alt="Beit El Hekma · Chinese Spring Festival 2026" loading="lazy"><figcaption>Beit El Hekma · Chinese Spring Festival 2026</figcaption></figure>
+      <figure data-full="pyramids-02.webp"><img src="pyramids-02.webp" width="800" height="800" decoding="async" alt="Pyramids of Giza" loading="lazy"><figcaption>Pyramids of Giza</figcaption></figure>
+      <figure data-full="garden-01.webp"><img src="garden-01.webp" width="800" height="800" decoding="async" alt="Women's Day · International Garden" loading="lazy"><figcaption>Women's Day · International Garden</figcaption></figure>
+      <figure data-full="wegz-02.webp"><img src="wegz-02.webp" width="600" height="800" decoding="async" alt="WEGZ × PUBG Mobile × Neferdidi" loading="lazy"><figcaption>WEGZ × PUBG Mobile × Neferdidi</figcaption></figure>
+      <figure data-full="spring-02.webp"><img src="spring-02.webp" width="800" height="800" decoding="async" alt="Beit El Hekma · Chinese Spring Festival 2026" loading="lazy"><figcaption>Beit El Hekma · Chinese Spring Festival 2026</figcaption></figure>
+      <figure data-full="pyramids-03.webp"><img src="pyramids-03.webp" width="800" height="800" decoding="async" alt="Pyramids of Giza" loading="lazy"><figcaption>Pyramids of Giza</figcaption></figure>
+      <figure data-full="garden-02.webp"><img src="garden-02.webp" width="800" height="800" decoding="async" alt="Women's Day · International Garden" loading="lazy"><figcaption>Women's Day · International Garden</figcaption></figure>
+      <figure data-full="wegz-03.webp"><img src="wegz-03.webp" width="600" height="800" decoding="async" alt="WEGZ × PUBG Mobile × Neferdidi" loading="lazy"><figcaption>WEGZ × PUBG Mobile × Neferdidi</figcaption></figure>
+      <figure data-full="spring-03.webp"><img src="spring-03.webp" width="800" height="800" decoding="async" alt="Beit El Hekma · Chinese Spring Festival 2026" loading="lazy"><figcaption>Beit El Hekma · Chinese Spring Festival 2026</figcaption></figure>
+      <figure data-full="pyramids-04.webp"><img src="pyramids-04.webp" width="800" height="800" decoding="async" alt="Pyramids of Giza" loading="lazy"><figcaption>Pyramids of Giza</figcaption></figure>
+      <figure data-full="wegz-04.webp"><img src="wegz-04.webp" width="600" height="800" decoding="async" alt="WEGZ × PUBG Mobile × Neferdidi" loading="lazy"><figcaption>WEGZ × PUBG Mobile × Neferdidi</figcaption></figure>
+      <figure data-full="garden-03.webp"><img src="garden-03.webp" width="800" height="800" decoding="async" alt="Women's Day · International Garden" loading="lazy"><figcaption>Women's Day · International Garden</figcaption></figure>
+      <figure data-full="pyramids-05.webp"><img src="pyramids-05.webp" width="800" height="800" decoding="async" alt="Pyramids of Giza" loading="lazy"><figcaption>Pyramids of Giza</figcaption></figure>
+      <figure data-full="pyramids-08.webp"><img src="pyramids-08.webp" width="800" height="800" decoding="async" alt="Pyramids of Giza" loading="lazy"><figcaption>Pyramids of Giza</figcaption></figure>
+      <figure data-full="pyramids-09.webp"><img src="pyramids-09.webp" width="800" height="800" decoding="async" alt="Pyramids of Giza" loading="lazy"><figcaption>Pyramids of Giza</figcaption></figure>
+      <figure data-full="pyramids-10.webp"><img src="pyramids-10.webp" width="800" height="800" decoding="async" alt="Pyramids of Giza" loading="lazy"><figcaption>Pyramids of Giza</figcaption></figure>
+      <figure data-full="garden-04.webp"><img src="garden-04.webp" width="800" height="800" decoding="async" alt="Women's Day · International Garden" loading="lazy"><figcaption>Women's Day · International Garden</figcaption></figure>
+    </div>
+      <button class="nfd-garrow r" aria-label="Next photos">›</button>
+    </div>
+  </div>
+</section>
+<div class="nfd-lightbox" id="nfdLightbox" aria-hidden="true">
+    <button class="nfd-close" aria-label="Close">✕</button>
+    <button class="nfd-prev" aria-label="Previous">‹</button>
+    <img alt="">
+    <button class="nfd-next" aria-label="Next">›</button>
+    <div class="nfd-cap"></div>
+  </div>
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Get in touch</div>
+<h2>Let's talk</h2>
+<p>Whether you want to work with us, open a franchise, or just tell us how good your last cup was — we're listening.</p>
+</div>
+<div class="contact-grid reveal">
+<a class="contact-card" href="https://www.instagram.com/neferdidimilktea/" rel="noopener" target="_blank">
+<b>Instagram</b>
+<p>Follow us for new flavours, behind-the-scenes and daily updates.</p>
+<span class="link">@neferdidimilktea →</span>
+</a>
+<a class="contact-card" href="https://www.facebook.com/profile.php?id=61575076108487" rel="noopener" target="_blank">
+<b>Facebook</b>
+<p>Stay connected with our community and find out about events.</p>
+<span class="link">Neferdidi Milkteashop →</span>
+</a>
+<a class="contact-card" href="https://www.tiktok.com/@neferdidimilkteashop" rel="noopener" target="_blank">
+<b>TikTok</b>
+<p>Watch our latest drinks, trends and fun moments.</p>
+<span class="link">@neferdidimilkteashop →</span>
+</a>
+</div>
+<div class="socials reveal">
+<a class="social" href="https://www.instagram.com/neferdidimilktea/" rel="noopener" target="_blank">Instagram</a>
+<a class="social" href="https://www.facebook.com/profile.php?id=61575076108487" rel="noopener" target="_blank">Facebook</a>
+<a class="social" href="https://www.tiktok.com/@neferdidimilkteashop" rel="noopener" target="_blank">TikTok</a>
+</div>
+</div>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">
+<span class="brand-mark">N</span>
+<span class="brand-text">NEFERDIDI<small>MILKTEASHOP</small></span>
+</div>
+<p>Freshly brewed milk tea, fruit tea, coffee and shakes — made your way, every day, across Egypt.</p>
+</div>
+<div class="footer-col">
+<h4>Explore</h4>
+<a href="#story">Our Story</a>
+<a href="#menu">Menu</a>
+<a href="#branches">Branches</a>
+<a href="#events">Events</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Popular</h4>
+<a href="#menu">Brown Sugar Boba</a>
+<a href="#menu">Cream Mango Boba</a>
+<a href="#menu">Pistachio Spanish Latte</a>
+<a href="#menu">Spanish Latte</a>
+</div>
+</div>
+<div class="footer-bottom">
+<div><strong>NEFERDIDI <span>●</span></strong>  MILKTEASHOP</div>
+<div>Good drinks. Good moments.  © <span id="year"></span> Neferdidi</div>
+</div>
+</div>
+</footer>
+<button aria-label="Back to top" class="to-top" id="toTop">↑</button>
+<script>
+/* ---------- Header shadow ---------- */
+const header = document.getElementById('siteHeader');
+addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', scrollY > 8);
+}, { passive: true });
+
+/* ---------- Mobile nav ---------- */
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+burger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.classList.toggle('active', open);
+  burger.setAttribute('aria-expanded', open);
+});
+function closeMobileNav() {
+  nav.classList.remove('open');
+  burger.classList.remove('active');
+  burger.setAttribute('aria-expanded', 'false');
+  burger.setAttribute('aria-label', 'Open menu');
+}
+burger.addEventListener('click', () => burger.setAttribute('aria-label', nav.classList.contains('open') ? 'Close menu' : 'Open menu'));
+nav.addEventListener('click', e => {
+  if (e.target.closest('a')) closeMobileNav();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
+document.addEventListener('click', e => {
+  if (nav.classList.contains('open') && !nav.contains(e.target) && !burger.contains(e.target)) closeMobileNav();
+});
+
+/* ---------- Menu: horizontal collections + instant search ---------- */
+(() => {
+  const tabs = Array.from(document.querySelectorAll('.tabs .tab'));
+  const originalGrid = document.getElementById('menuGrid');
+  const searchInput = document.getElementById('menuSearch');
+  const results = document.getElementById('menuResults');
+  if (!originalGrid) return;
+
+  const dishes = Array.from(originalGrid.querySelectorAll('.dish'));
+  // Graceful placeholder for any product photo that is missing from the supplied assets.
+  dishes.forEach(dish => {
+    const image = dish.querySelector('.dish-photo');
+    if (!image) return;
+    const showFallback = () => {
+      if (!image.isConnected) return;
+      const fallback = document.createElement('div');
+      fallback.className = 'dish-photo-fallback';
+      fallback.setAttribute('role', 'img');
+      fallback.setAttribute('aria-label', image.alt || 'Drink image unavailable');
+      fallback.textContent = '🥤';
+      image.replaceWith(fallback);
+    };
+    image.addEventListener('error', showFallback, { once: true });
+    if (image.complete && image.naturalWidth === 0) showFallback();
+  });
+  const catalog = document.createElement('div');
+  catalog.className = 'menu-catalog reveal';
+  catalog.id = 'menuCatalog';
+  const categories = [
+    { id: 'fruit', title: 'Fruit & Slush', description: 'Fresh, fruity and refreshing' },
+    { id: 'boba', title: 'Boba & Milk Tea', description: 'Creamy classics and chewy boba' },
+    { id: 'pistachio', title: 'Pistachio Series', description: 'Rich, nutty favourites' },
+    { id: 'coffee', title: 'Coffee & Tea', description: 'Your everyday pick-me-up' },
+    { id: 'topping', title: 'Toppings', description: 'Make your drink your own' }
+  ];
+  const tracks = new Map();
+  const normalize = value => (value || '').toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+  categories.forEach(category => {
+    const section = document.createElement('section');
+    section.className = 'menu-category';
+    section.id = 'menu-cat-' + category.id;
+    section.dataset.category = category.id;
+
+    const head = document.createElement('div');
+    head.className = 'menu-category-head';
+    const copy = document.createElement('div');
+    copy.className = 'menu-category-copy';
+    const title = document.createElement('h3');
+    title.className = 'menu-category-title';
+    title.textContent = category.title;
+    const subtitle = document.createElement('p');
+    subtitle.className = 'menu-category-subtitle';
+    subtitle.textContent = category.description;
+    copy.append(title, subtitle);
+
+    const controls = document.createElement('div');
+    controls.className = 'menu-carousel-controls';
+    const count = document.createElement('span');
+    count.className = 'menu-category-count';
+    const previous = document.createElement('button');
+    previous.className = 'menu-arrow';
+    previous.type = 'button';
+    previous.setAttribute('aria-label', 'Scroll ' + category.title + ' left');
+    previous.innerHTML = '&#8592;';
+    const next = document.createElement('button');
+    next.className = 'menu-arrow';
+    next.type = 'button';
+    next.setAttribute('aria-label', 'Scroll ' + category.title + ' right');
+    next.innerHTML = '&#8594;';
+    controls.append(count, previous, next);
+    head.append(copy, controls);
+
+    const track = document.createElement('div');
+    track.className = 'menu-grid menu-carousel';
+    track.setAttribute('aria-label', category.title + ' drinks');
+    track.tabIndex = 0;
+    const matching = dishes.filter(dish => dish.dataset.cat === category.id);
+    matching.forEach((dish, index) => {
+      dish.setAttribute('role', 'listitem');
+      dish.dataset.menuIndex = String(index);
+      track.appendChild(dish);
+    });
+    count.textContent = matching.length + (matching.length === 1 ? ' item' : ' items');
+    previous.addEventListener('click', () => track.scrollBy({ left: -track.clientWidth * 0.8, behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: track.clientWidth * 0.8, behavior: 'smooth' }));
+
+    section.append(head, track);
+    catalog.appendChild(section);
+    tracks.set(category.id, { section, track, count });
+  });
+
+  const empty = document.createElement('p');
+  empty.className = 'menu-empty';
+  empty.textContent = 'No drinks found. Try another name or category.';
+  empty.hidden = true;
+  originalGrid.replaceWith(catalog);
+  catalog.after(empty);
+
+  function activateTab(tab) {
+    tabs.forEach(item => {
+      const selected = item === tab;
+      item.classList.toggle('active', selected);
+      item.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+  }
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    activateTab(tab);
+    const categoryId = tab.dataset.cat || 'all';
+    const target = categoryId === 'all' ? catalog : document.getElementById('menu-cat-' + categoryId);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: categoryId === 'all' ? 'start' : 'nearest' });
+  }));
+
+  function applyMenuSearch() {
+    const term = normalize(searchInput?.value.trim() || '');
+    let visible = 0;
+    tracks.forEach(({ section, track, count }) => {
+      const cards = Array.from(track.querySelectorAll('.dish'));
+      let categoryVisible = 0;
+      cards.forEach(dish => {
+        const imageAlt = dish.querySelector('img')?.alt || '';
+        const match = !term || normalize(dish.textContent + ' ' + imageAlt).includes(term);
+        dish.classList.toggle('hide', !match);
+        if (match) { visible++; categoryVisible++; }
+      });
+      count.textContent = categoryVisible + (categoryVisible === 1 ? ' item' : ' items');
+      section.hidden = !!term && categoryVisible === 0;
+    });
+    if (results) results.textContent = term ? (visible + (visible === 1 ? ' match' : ' matches')) : (visible + ' drinks · swipe to explore');
+    empty.hidden = visible !== 0;
+  }
+  if (searchInput) searchInput.addEventListener('input', applyMenuSearch);
+  applyMenuSearch();
+})();
+
+/* ---------- Global image fallback ---------- */
+document.querySelectorAll('img').forEach(image => {
+  image.addEventListener('error', () => {
+    image.classList.add('image-unavailable');
+    image.style.visibility = 'hidden';
+  }, { once: true });
+});
+
+/* ---------- Branch search + filter ---------- */
+const search = document.getElementById('search');
+const area = document.getElementById('area');
+const cards = [...document.querySelectorAll('.branch')];
+const empty = document.getElementById('empty');
+const count = document.getElementById('count');
+
+function filterCards() {
+  const q = search.value.trim().toLowerCase();
+  const a = area.value;
+  let visible = 0;
+
+  cards.forEach(card => {
+    const matchText = card.dataset.name.includes(q) || card.innerText.toLowerCase().includes(q);
+    const matchArea = a === 'all' || card.dataset.area === a;
+    const show = matchText && matchArea;
+    card.style.display = show ? 'flex' : 'none';
+    if (show) visible++;
+  });
+
+  empty.style.display = visible ? 'none' : 'block';
+  count.textContent = visible + ' LOCATION' + (visible === 1 ? '' : 'S');
+}
+search.addEventListener('input', filterCards);
+area.addEventListener('change', filterCards);
+
+/* ---------- Reveal on scroll ---------- */
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduce && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: .12, rootMargin: '0px 0px -40px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+}
+
+/* ---------- Scroll spy ---------- */
+const links = [...document.querySelectorAll('.nav-link')];
+const sections = [...document.querySelectorAll('section[id], main[id]')];
+if ('IntersectionObserver' in window) {
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(s => spy.observe(s));
+}
+
+/* ---------- Back to top ---------- */
+const toTop = document.getElementById('toTop');
+addEventListener('scroll', () => toTop.classList.toggle('show', scrollY > 700), { passive: true });
+toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }));
+
+/* ---------- Year ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>
+(function () {
+  var sec = document.getElementById('events');
+  if (!sec) return;
+
+  /* slider arrows */
+  var track = sec.querySelector('.nfd-track');
+  sec.querySelector('.nfd-slider .nfd-arrow.l').onclick = function () { track.scrollBy({ left: -260 }); };
+  sec.querySelector('.nfd-slider .nfd-arrow.r').onclick = function () { track.scrollBy({ left: 260 }); };
+  var figs = sec.querySelectorAll('.nfd-gallery figure');
+
+  /* photo carousel: arrows + mouse drag (touch swipe works natively) */
+  var gal = sec.querySelector('.nfd-gallery');
+  sec.querySelector('.nfd-garrow.l').onclick = function () { gal.scrollBy({ left: -gal.clientWidth * 0.8 }); };
+  sec.querySelector('.nfd-garrow.r').onclick = function () { gal.scrollBy({ left: gal.clientWidth * 0.8 }); };
+  var down = false, moved = false, sx = 0, sl = 0;
+  gal.addEventListener('pointerdown', function (e) {
+    if (e.pointerType !== 'mouse') return;
+    down = true; moved = false; sx = e.clientX; sl = gal.scrollLeft;
+  });
+  window.addEventListener('pointermove', function (e) {
+    if (!down) return;
+    var dx = e.clientX - sx;
+    if (!moved && Math.abs(dx) > 5) {
+      moved = true; gal.classList.add('drag');
+      gal.style.scrollBehavior = 'auto'; gal.style.scrollSnapType = 'none';
+    }
+    if (moved) gal.scrollLeft = sl - dx;
+  });
+  window.addEventListener('pointerup', function () {
+    if (!down) return;
+    down = false;
+    if (moved) { gal.classList.remove('drag'); gal.style.scrollBehavior = ''; gal.style.scrollSnapType = ''; }
+  });
+
+
+  /* lightbox */
+  var box = document.getElementById('nfdLightbox');
+  var img = box.querySelector('img'), cap = box.querySelector('.nfd-cap');
+  var list = [], idx = 0;
+  function show(i) {
+    idx = (i + list.length) % list.length;
+    img.src = list[idx].getAttribute('data-full') || list[idx].querySelector('img').src;
+    cap.textContent = list[idx].querySelector('figcaption').textContent + '  ·  ' + (idx + 1) + '/' + list.length;
+  }
+  function close() { box.classList.remove('open'); document.body.style.overflow = ''; }
+  figs.forEach(function (f) {
+    f.addEventListener('click', function () {
+      if (moved) { moved = false; return; }
+      list = Array.prototype.slice.call(figs);
+      show(list.indexOf(f));
+      box.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  box.querySelector('.nfd-close').onclick = close;
+  box.querySelector('.nfd-prev').onclick = function () { show(idx - 1); };
+  box.querySelector('.nfd-next').onclick = function () { show(idx + 1); };
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!box.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+})();
+</script>
+</body>
+</html>
